@@ -1,0 +1,242 @@
+.is-reveal-open .off-canvas-wrapper {
+	overflow-x:visible;
+}
+h2 {
+	color:$primary-color;
+	font-size: rem-calc(42);
+	margin: rem-calc(20 0);
+}
+/** Off canvas **/
+div.off-canvas {
+	height: 100%;
+
+	a, h3 {
+		color:$white;
+	}
+	.is-drilldown-submenu{
+	 background-color: 	darken($primary-color, 20);
+	}
+}
+header {
+	position:relative;
+
+	#overlay {
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#29669e+0,2a3b5a+100&0.7+0,0.7+100 */
+		background: -moz-linear-gradient(top,  rgba(41,102,158,0.7) 0%, rgba(42,59,90,0.7) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(top,  rgba(41,102,158,0.7) 0%,rgba(42,59,90,0.7) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to bottom,  rgba(41,102,158,0.7) 0%,rgba(42,59,90,0.7) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b329669e', endColorstr='#b32a3b5a',GradientType=0 ); /* IE6-9 */
+	}
+
+	.navegacion {
+		background-color:transparent;
+		position: absolute;
+		top:0;
+		left:0;
+		width:100%;
+	}
+	.encabezado {
+		left:0;
+		top:50%;
+		position: absolute;
+		width:100%;
+		transform: translateY(-50%);
+		h1 {
+			border-top:2px solid $white;
+			border-bottom:2px solid $white;
+			color:$white;
+			text-transform:uppercase;
+		}
+	}
+}
+.menu-icon{
+ 		@include hamburger($white, $white,60px,38px, 8px, 3); 
+		margin-top: rem-calc(20);
+}
+section.habitaciones {
+	padding: rem-calc(30 0);
+	a {
+		color:$black;
+	}
+	div.imagen {
+		position: relative;
+
+		.titulo {
+			position: absolute;
+			bottom:0;
+			left:0;
+			padding-left:rem-calc(20);
+			h3 {
+				color:$white;
+			}
+		}
+	}
+
+	div.contenido {
+		background-color:$white;
+		padding:rem-calc(20);
+	}
+}
+.button {
+	@include button-style($secondary-color, darken($secondary-color, 10), $white);
+	text-transform:uppercase;
+	font-weight:bold;
+	font-size: rem-calc(16);
+	margin: rem-calc(20 0);
+}
+.button.reset {
+	@include button-hollow;
+	border:2px solid $secondary-color;
+	color:$secondary-color;
+}
+/*** Separadores **/
+.imagen-separador {
+	height:200px;
+	background-position: center center;
+	background-repeat:no-repeat;
+	background-attachment:scroll;
+	@include breakpoint(medium) {
+		height:350px;
+		background-size:cover;
+	}
+	@include breakpoint(large) {
+		background-size:cover;
+	}
+}
+.imagen-alberca {
+	background-image:url(../assets/imagenes/separadores/small/separator01-image.jpg);
+	@include breakpoint(medium) {
+		background-image:url(../assets/imagenes/separadores/medium/separator01-image.jpg);
+	}
+	@include breakpoint(large) {
+		background-image:url(../assets/imagenes/separadores/large/separator01-image.jpg);
+	}
+}
+.imagen-bar {
+	background-image:url(../assets/imagenes/separadores/small/separator02-image.jpg);
+	@include breakpoint(medium) {
+		background-image:url(../assets/imagenes/separadores/medium/separator02-image.jpg);
+	}
+	@include breakpoint(large) {		
+		background-image:url(../assets/imagenes/separadores/large/separator02-image.jpg);
+	}
+}
+.imagen-habitaciones {
+	background-image:url(../assets/imagenes/separadores/small/separator03-image.jpg);
+	@include breakpoint(medium) {
+		background-image:url(../assets/imagenes/separadores/medium/separator03-image.jpg);
+	}
+	@include breakpoint(large) {
+		background-image:url(../assets/imagenes/separadores/large/separator03-image.jpg);
+	}
+}
+.habitacion-uno {
+	background-image:url(../assets/imagenes/separadores/small/separator-room01-image.jpg);
+	@include breakpoint(medium) {
+		background-image:url(../assets/imagenes/separadores/medium/separator-room01-image.jpg);
+	}
+	@include breakpoint(large) {
+		background-image:url(../assets/imagenes/separadores/large/separator-room01-image.jpg);
+	}
+}
+/*** About Us Section **/
+section.galeria-sobre-nosotros {
+	@include breakpoint(medium) {
+		height:rem-calc(560);
+		position:relative;
+	}
+	@include breakpoint(medium) {
+		height:rem-calc(420);
+	}
+	.vacio {
+		@include breakpoint(medium) {
+			height:rem-calc(560);
+		}
+		@include breakpoint(medium) {
+			height:rem-calc(420);
+		}
+	}
+	div.contenido-galeria-sobre-nosotros {
+		@include breakpoint(medium) {
+			position: absolute;
+			top:rem-calc(20);
+			left:0;
+			width:100%;
+		}
+	}
+}
+.azulBG {
+	background-color:$primary-color;
+}
+.blanco {
+	color:$white;
+}
+section.reservaciones {
+	padding:rem-calc(50);
+}
+footer {
+	background-color: $primary-color;
+	padding-top: rem-calc(30);
+	color: $white;
+
+	.menu {
+		a {
+			color:$white;
+		}
+	}
+	.informacion-contacto {
+		margin-top: rem-calc(-10);
+		li {
+			position: relative;
+			height: 100px;
+			padding-left: 60px;
+			padding-top: 35px;
+			&:first-child {
+				padding-top: 22px;
+			}
+			i {
+				font-size: rem-calc(60);
+				position: absolute;
+				top:0; left:0;
+			}
+		}
+	}
+	.social {
+		i {
+			font-size: rem-calc(60);
+		}
+	}
+	div.copyright {
+		padding: rem-calc(20 0);
+		background-color: darken($primary-color, 5);
+		p {
+			margin:0;
+		}
+	}
+
+}
+	/* PAGINAS INTERNAS **/
+section.contenido {
+	padding: rem-calc(30 0);
+}
+/* Servicios **/
+section.servicios .servicio-texto{
+	display:flex;
+	justify-content:center;
+	flex-direction:column;
+}
+
+
+section.contacto {
+	@include breakpoint(large) {
+				padding: rem-calc(120 0);
+	}
+	label {
+		font-weight: bold;
+		font-size: rem-calc(14);
+	}
+}
